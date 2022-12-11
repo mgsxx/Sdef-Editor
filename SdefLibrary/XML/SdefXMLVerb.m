@@ -35,6 +35,10 @@
         [node appendChild:childNode];
       }
     }
+      
+      if(_direct || _result) {
+          [node setEmpty:NO];
+      }
   }
   return node;
 }
@@ -83,7 +87,19 @@
         // TODO: set meta
       }
     }
-    [node setEmpty:YES];
+    // MGS
+
+//      int cnt = 2 ; //[node countOfTypes];
+//      if ( cnt < 2) {
+//           [node setEmpty:YES];
+//      } else {
+      
+      // let it be always not ampty if it has type I don't care
+          [node setEmpty:NO];
+//           }
+      
+        
+    // [node setEmpty:YES];
   }
   return node;
 }
@@ -152,7 +168,13 @@
   SdefXMLNode *node = nil;
   if ([self hasType] && (node = [super xmlNodeForVersion:version])) {
     [node removeAttributeForKey:@"name"];
-    [node setEmpty:YES];
+    
+      // MGS
+      
+      // [node setEmpty:YES];
+
+      // let it be always not ampty if it has type I don't care
+          [node setEmpty:NO];
   }
   return node;
 }

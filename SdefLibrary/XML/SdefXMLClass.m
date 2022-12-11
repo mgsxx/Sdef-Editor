@@ -135,6 +135,9 @@ NSArray *SdefXMLAccessorStringsFromFlag(NSUInteger flag);
   SdefXMLNode *node = nil;
   if ([self hasType] && (node = [super xmlNodeForVersion:version])) {
     if (![self name]) [node setAttribute:@"contents" forKey:@"name"];
+      
+      // MGS
+      [node setEmpty: NO];
     
     NSString *attr = SdefXMLAccessStringFromFlag([self access]);
     if (attr) [node setAttribute:attr forKey:@"access"];

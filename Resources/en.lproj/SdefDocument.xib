@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,33 +20,32 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
             <rect key="contentRect" x="146" y="357" width="645" height="436"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="775"/>
             <value key="minSize" type="size" width="500" height="430"/>
             <view key="contentView" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="645" height="436"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <splitView vertical="YES" id="70" customClass="WBSplitView">
+                    <splitView fixedFrame="YES" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="70" customClass="WBSplitView">
                         <rect key="frame" x="0.0" y="0.0" width="645" height="437"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="21">
+                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="21">
                                 <rect key="frame" x="0.0" y="0.0" width="163" height="437"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" id="bpx-uO-AeJ">
-                                    <rect key="frame" x="1" y="0.0" width="161" height="436"/>
+                                    <rect key="frame" x="1" y="1" width="161" height="435"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="16" headerView="86" indentationPerLevel="16" autoresizesOutlineColumn="YES" outlineTableColumn="23" id="22" customClass="WBOutlineView">
-                                            <rect key="frame" x="0.0" y="0.0" width="161" height="411"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="161" height="410"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="_item" editable="NO" width="157.7808" minWidth="39.780760000000001" maxWidth="1000" id="23">
+                                                <tableColumn identifier="_item" editable="NO" width="149" minWidth="39.780760000000001" maxWidth="1000" id="23">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Suites">
-                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                     </tableHeaderCell>
@@ -74,12 +73,12 @@
                                     <rect key="frame" x="-22" y="17" width="11" height="408"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <tableHeaderView key="headerView" id="86">
+                                <tableHeaderView key="headerView" wantsLayer="YES" id="86">
                                     <rect key="frame" x="0.0" y="0.0" width="161" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <tabView drawsBackground="NO" controlSize="mini" type="noTabsNoBorder" id="32">
+                            <tabView fixedFrame="YES" drawsBackground="NO" controlSize="mini" type="noTabsNoBorder" id="32">
                                 <rect key="frame" x="172" y="0.0" width="473" height="437"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <font key="font" metaFont="miniSystem"/>
@@ -142,6 +141,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="17"/>
             </connections>
+            <point key="canvasLocation" x="12" y="104"/>
         </window>
         <menu title="Menu" id="75" userLabel="ContextMenu">
             <items>
@@ -151,6 +151,7 @@
                     </connections>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="-214" y="-226"/>
         </menu>
     </objects>
 </document>

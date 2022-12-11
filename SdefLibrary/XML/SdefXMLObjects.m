@@ -240,6 +240,9 @@
   if (node) {
     if (version == kSdefPantherVersion) {
       if ([self hasType]) {
+          // MGS
+          [node setEmpty:NO];
+          
         NSArray *types = [self types];
         NSMutableString *string = [[NSMutableString alloc] init];
         for (NSUInteger idx = 0; idx < [types count]; idx++) {
@@ -270,6 +273,7 @@
           SdefXMLNode *typeNode = [type xmlNodeForVersion:version];
           if (typeNode) {
             [node appendChild:typeNode];
+            [node setEmpty:NO]; // mgs
           }
         }
       } else if ([self hasType]) {
